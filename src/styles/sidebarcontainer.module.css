@@ -1,0 +1,53 @@
+.sideBarContainer {
+  width: 450px;
+  padding: 15px;
+  border-left: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sideTopBar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sideTopBarSearch, .chat {
+  width: 100%;
+}
+
+.chatListArea {
+  margin-top: 10px;
+}
+
+.chatContainer {
+  display: flex;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border-bottom: 1px solid #d3d3d3;
+  cursor: pointer;
+  gap: 5px;
+  align-items: center;
+}
+
+.chatContainer:hover {
+  background-color: #E8E8E8;
+}
+
+.titleTimeContainer, .messageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.badge {
+  margin-right: 10px;
+}
+
+.chatMessage {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 295px;
+}
