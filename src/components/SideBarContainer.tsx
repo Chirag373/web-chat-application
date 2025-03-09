@@ -138,7 +138,7 @@ const SideBarContainer = () => {
     setSearchQuery(e.target.value);
   };
   return (
-    <section className={styles.sideBarContainer}>
+    <section>
       <div className={styles.sideTopBar}>
         <MenuIcon />
         <div className={styles.sideTopBarSearch}>
@@ -176,28 +176,30 @@ const SideBarContainer = () => {
           </Box>
         </div>
       </div>
-      <div className={styles.chatListArea}>
-        {Chats.map((chat) => (
-          <div key={chat.id} className={styles.chatContainer}>
-            <SupervisedUserCircleIcon sx={{ fontSize: 50 }} />
-            <div className={styles.chat}>
-              <div className={styles.titleTimeContainer}>
-                <h3>{chat.name}</h3>
-                <p>{chat.time}</p>
-              </div>
-              <div className={styles.messageContainer}>
-                <p className={styles.chatMessage}>{chat.message}</p>
-                {chat.unread > 0 && (
-                  <Badge
-                    badgeContent={chat.unread}
-                    className={styles.badge}
-                    color="primary"
-                  />
-                )}
+      <div className={styles.sideBarContainer}>
+        <div className={styles.chatListArea}>
+          {Chats.map((chat) => (
+            <div key={chat.id} className={styles.chatContainer}>
+              <SupervisedUserCircleIcon sx={{ fontSize: 50 }} />
+              <div className={styles.chat}>
+                <div className={styles.titleTimeContainer}>
+                  <h3>{chat.name}</h3>
+                  <p>{chat.time}</p>
+                </div>
+                <div className={styles.messageContainer}>
+                  <p className={styles.chatMessage}>{chat.message}</p>
+                  {chat.unread > 0 && (
+                    <Badge
+                      badgeContent={chat.unread}
+                      className={styles.badge}
+                      color="primary"
+                    />
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

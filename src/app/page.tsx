@@ -1,9 +1,9 @@
-import SideBarContainer from "@/components/SideBarContainer";
+import ChatPage from "@/pages/chat/pages";
 
 export default function Home() {
   return (
     <div>
-      <SideBarContainer />
+      <ChatPage />
     </div>
   );
 }
